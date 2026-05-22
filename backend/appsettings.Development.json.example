@@ -1,0 +1,15 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug",
+      "Microsoft.EntityFrameworkCore.Database.Command": "Information"
+    }
+  },
+  "AllowedOrigins": [
+    "http://localhost:3000",
+    "http://localhost:5173"
+  ],
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Port=5432;Database=teampulse;Username=postgres;Password=localpass"
+  }
+}

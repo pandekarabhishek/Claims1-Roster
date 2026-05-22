@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html, body, #root { height: 100%; }
+  body { overflow: hidden; font-family: 'DM Sans', sans-serif; -webkit-font-smoothing: antialiased; background: #0d1117; color: #e6edf3; }
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+  input[type=date]::-webkit-calendar-picker-indicator { filter: invert(.5); cursor: pointer; }
+  select option { background: #1c2128; color: #e6edf3; }
+}
+
+@layer components {
+  .input    { @apply bg-surface-2 border border-white/10 rounded-lg px-3 py-2 text-sm text-white/90 outline-none transition-colors w-full focus:border-brand-500 placeholder:text-white/25; }
+  .btn-pri  { @apply inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium bg-brand-500 text-white border border-brand-500 cursor-pointer hover:bg-brand-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-sec  { @apply inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium bg-surface-2 text-white/60 border border-white/10 cursor-pointer hover:text-white/90 hover:bg-surface-3 transition-all; }
+  .btn-ghost{ @apply inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-sm bg-transparent text-white/40 border border-transparent cursor-pointer hover:bg-white/5 hover:text-white/70 transition-all; }
+  .card     { @apply bg-surface-1 border border-white/[0.06] rounded-xl; }
+  .badge    { @apply inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium; }
+  .nav-link { @apply flex items-center gap-2.5 px-2.5 py-2 rounded-md text-[13px] text-white/40 cursor-pointer transition-all hover:bg-white/5 hover:text-white/70 border-none bg-transparent w-full; }
+  .nav-link.active { @apply bg-brand-500/10 text-brand-400 font-medium; }
+  .sec-hdr  { @apply flex items-center justify-between px-4 py-3 border-b border-white/[0.06]; }
+  .prow     { @apply flex items-center gap-3 px-4 py-2.5 border-b border-white/[0.04] last:border-0 hover:bg-white/[0.02] transition-colors; }
+}
